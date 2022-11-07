@@ -13,6 +13,7 @@ function handleSubmit(event) {
     })
 
     //New code:
+    /*
     const baseURL = "https://api.meaningcloud.com/sentiment-2.1";
     const apiKey = '20489377c5952a89f770375f1b73862b';
     const returnedData = {content:''};
@@ -49,7 +50,7 @@ function handleSubmit(event) {
             // appropriately handle the error
         }
 };
-
+*/
 }
 
 export { handleSubmit }
