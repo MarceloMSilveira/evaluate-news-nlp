@@ -13,7 +13,7 @@ const app = express()
    key: process.env.API_KEY
 })*/
 
-console.log(`Your API key is ${process.env.API_KEY}`)
+//console.log(`Your API key is ${process.env.API_KEY}`)
 
 app.use(express.static('dist'))
 
