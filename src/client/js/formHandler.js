@@ -5,9 +5,10 @@ function handleSubmit(event) {
   const apiKey = '20489377c5952a89f770375f1b73862b';
   const returnedData = {content:''};
 
+  let formText =  document.getElementById('name').value;
   const formdata = new FormData();
   formdata.append("key", apiKey);
-  formdata.append("txt", "I am not sure if i need your money, what do you think?");
+  formdata.append("txt", formText);
   formdata.append("lang", "en");  // 2-letter code, like en es fr ...
 
   const requestOptions = {
@@ -17,10 +18,10 @@ function handleSubmit(event) {
   };
 
     // check what text was put into the form field
-    let formText = document.getElementById('name').value
-    Client.checkForName(formText)
+    //let formText = document.getElementById('name').value
+    //Client.checkForName(formText)
 
-    console.log("::: Form Submitted :::")
+    console.log("::: Form Very Submitted :::")
     fetch(baseURL,requestOptions)
     .then(res => res.json())
     .then(function(res) {
