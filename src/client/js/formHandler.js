@@ -3,14 +3,18 @@ function handleSubmit(event) {
 
   const baseURL = "https://api.meaningcloud.com/sentiment-2.1";
   let apiKey = '';
+
  
   fetch('http://localhost:8081/test')
     .then(res => res.json())
     .then(function(res) {
-        document.getElementById('results2').innerHTML = res;
-        apiKey = res;
+        console.log('testing')
+        console.log(res);
+        document.getElementById('results2').innerHTML = 'testing';
+        //apiKey = res;
     })
 
+  apiKey = '20489377c5952a89f770375f1b73862b'
   let formText =  document.getElementById('name').value;
   const formdata = new FormData();
   formdata.append("key", apiKey);
@@ -23,7 +27,7 @@ function handleSubmit(event) {
     redirect: 'follow'
   };
 
-    console.log("::: Form Very Submitted :::")
+    console.log("::: Form Submitted :::")
     fetch(baseURL,requestOptions)
     .then(res => res.json())
     .then(function(res) {
