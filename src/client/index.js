@@ -14,7 +14,7 @@ export {
 
 console.log(checkForName);
 
-alert("I EXIST")
-console.log("CHANGE!!");
+alert("YES! I EXIST")
+console.log("CHANGE!!!!");
 
 
