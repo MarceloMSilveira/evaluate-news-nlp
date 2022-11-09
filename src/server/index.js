@@ -8,7 +8,10 @@ dotenv.config()
 
 const app = express()
 
-const APIKey = process.env.API_KEY;
+// MeaningCloudApi
+/*const textapi = MeaningCloud({
+   key: process.env.API_KEY
+})*/
 
 //console.log(`Your API key is ${process.env.API_KEY}`)
 
@@ -27,5 +30,5 @@ app.listen(8081, function () {
 })
 
 app.get('/test', function (req, res) {
-    res.send(APIKey)
+    res.send(mockAPIResponse)
 })
