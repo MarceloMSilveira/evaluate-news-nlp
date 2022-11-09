@@ -28,6 +28,13 @@ function handleSubmit(event) {
         document.getElementById('results').innerHTML = res.subjectivity;
     })
 
+    //get key
+    fetch('http://localhost:8081/key')
+    .then(res=> res.json())
+    .then(function(res){
+      document.getElementById('results2').innerHTML = 'test';
+    })
+
     //New code:
     /*
     const baseURL = "https://api.meaningcloud.com/sentiment-2.1";
