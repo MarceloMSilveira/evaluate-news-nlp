@@ -32,7 +32,7 @@ function handleSubmit(event) {
     fetch('http://localhost:8081/key')
     .then(res=> res.json())
     .then(function(res){
-      document.getElementById('results2').innerHTML = res.key;
+      document.getElementById('results2').innerHTML = 'test';
     })
 
     //New code:
