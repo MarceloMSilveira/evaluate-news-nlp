@@ -3,7 +3,8 @@ const express = require('express')
 const mockAPIResponse = require('./mockAPI.js')
 const MeaningCloud = require('meaning-cloud')
 const dotenv = require('dotenv')
-
+projectData = {};
+projectData['key']=process.env.API_KEY
 dotenv.config()
 
 const app = express()
@@ -31,4 +32,9 @@ app.listen(8081, function () {
 
 app.get('/test', function (req, res) {
     res.send(mockAPIResponse)
+})
+
+app.get('/key',function(req,res){
+    res.send(projectData);
+    console.log('inside get/key:'+projectData.key);
 })
