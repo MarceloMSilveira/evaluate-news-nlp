@@ -4,7 +4,7 @@ const mockAPIResponse = require('./mockAPI.js')
 const MeaningCloud = require('meaning-cloud')
 const dotenv = require('dotenv')
 projectData = {};
-projectData['key']=process.env.API_KEY
+projectData['key'] = process.env.API_KEY
 dotenv.config()
 
 const app = express()
