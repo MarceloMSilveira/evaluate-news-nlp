@@ -3,7 +3,8 @@ function handleSubmit(event) {
 
   const baseURL = "https://api.meaningcloud.com/sentiment-2.1";
   let apiKey = '';
- 
+  //const returnedData = {content:''};
+
   fetch('http://localhost:8081/test')
     .then(res => res.json())
     .then(function(res) {
